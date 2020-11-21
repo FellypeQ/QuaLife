@@ -1,0 +1,10 @@
+.list-cities {
+  list-style: none;
+}
+
+.list-cities li {
+  display: inline;
+  float: left;
+  width: 20%;
+  margin-top: 0.4rem;
+}
