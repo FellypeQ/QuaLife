@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import "./ListCities.css";
 import SearchBar from "../SearchBar/SearchBar";
@@ -30,7 +31,16 @@ function ListCities() {
       <SearchBar filteredCities={filteredCities} />
       <ul className="list-cities">
         {stateBkp.map((elem, i) => {
-          return <li key={i}>{elem.name}</li>;
+          return (
+            <li key={i}>
+              <Link
+                className="city-list-li"
+                to={`cities/${elem.href.slice(46, -1)}`}
+              >
+                {elem.name}
+              </Link>
+            </li>
+          );
         })}
       </ul>
     </div>
