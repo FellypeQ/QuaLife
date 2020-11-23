@@ -1,0 +1,32 @@
+.score {
+  background-color: white;
+  margin: 2% 0;
+  padding: 4%;
+}
+
+.scoreData {
+  margin: 5% 0;
+}
+
+.scoreTopic {
+  display: flex;
+  align-items: center;
+  margin: 1% 0;
+}
+
+.scoreLabel {
+  width: 30%;
+}
+
+.scorePoint {
+  margin-right: 1%;
+}
+
+.scoreProgress {
+  width: 70%;
+  margin-right: 1%;
+}
+.scoreButton button {
+  font-size: 1rem;
+  padding: 0;
+}

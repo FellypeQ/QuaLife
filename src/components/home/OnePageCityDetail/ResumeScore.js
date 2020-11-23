@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
+import Summary from "./Summary";
+import CityScore from "./CityScore";
+
 function ResumeScore(props) {
   const [state, setState] = useState({ summary: "", categories: [] });
 
@@ -18,11 +21,14 @@ function ResumeScore(props) {
   }, [props.city]);
 
   return (
-    <div className="container w-100">
-      <div className="row w-100">
-        <div className="col">1 of 5</div>
-        <div className="col-9">{state.summary}</div>
-        <div className="col">5 of 5</div>
+    <div style={{ backgroundColor: "#f8f9fa", width: "100%" }}>
+      <div className="row">
+        <div className="col"></div>
+        <div className="col-7">
+          <Summary resume={state.summary} />
+          <CityScore scores={state.categories} />
+        </div>
+        <div className="col"></div>
       </div>
     </div>
   );
