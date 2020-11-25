@@ -27,7 +27,7 @@ function ResumeScore(props) {
       <div className="row">
         <div className="col"></div>
         <div className="col-7">
-          <Summary resume={state.summary} />
+          <Summary resume={state.summary} city={props.city} />
           <CityScore scores={state.categories} id={props.city} />
         </div>
         <div className="col">

@@ -1,6 +1,15 @@
-.summaryText {
+.summaryBlock {
   background-color: white;
   padding: 4%;
   margin-top: 2%;
+  font-size: 1.7rem;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.summaryText {
+  background-color: white;
+  margin-top: 5%;
   font-size: 1.3rem;
+  font-weight: normal;
 }

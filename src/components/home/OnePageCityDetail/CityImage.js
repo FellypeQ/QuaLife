@@ -38,6 +38,7 @@ function CityImage(props) {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        marginTop: "4%",
       }}
     >
       <h1 style={{ backgroundColor: "white", opacity: "0.5", padding: "1%" }}>
