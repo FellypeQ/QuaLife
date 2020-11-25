@@ -25,7 +25,10 @@ function Navbar(props) {
   }, []);
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav
+      className="navbar fixed-top navbar-expand-lg navbar-light bg-light"
+      style={{ borderBottom: "solid 1px #28A745" }}
+    >
       <a className="navbar-brand" href="/">
         Qualife
       </a>

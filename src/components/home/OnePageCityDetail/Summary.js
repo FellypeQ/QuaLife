@@ -1,14 +1,15 @@
 import React from "react";
 
+import "./Summary.css";
+
 function Summary(props) {
-  let temp = document.createElement("div");
-  //let text = document.createTextNode(props.resume);
-  //temp.appendChild(text);
+  function createMarkup() {
+    return { __html: props.resume };
+  }
 
-  temp.innerHTML = props.resume;
-  console.log(temp);
-
-  return <div>{props.resume}</div>;
+  return (
+    <div dangerouslySetInnerHTML={createMarkup()} className="summaryText"></div>
+  );
 }
 
 export default Summary;

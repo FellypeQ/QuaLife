@@ -40,7 +40,7 @@ function CityImage(props) {
         alignItems: "center",
       }}
     >
-      <h1 style={{ backgroundColor: "white", padding: "1%" }}>
+      <h1 style={{ backgroundColor: "white", opacity: "0.5", padding: "1%" }}>
         {state.cityName}
       </h1>
     </div>

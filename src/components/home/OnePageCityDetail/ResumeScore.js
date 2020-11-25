@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
+import "./ResumeScore.css";
 import Summary from "./Summary";
 import CityScore from "./CityScore";
 
@@ -26,9 +28,15 @@ function ResumeScore(props) {
         <div className="col"></div>
         <div className="col-7">
           <Summary resume={state.summary} />
-          <CityScore scores={state.categories} />
+          <CityScore scores={state.categories} id={props.city} />
         </div>
-        <div className="col"></div>
+        <div className="col">
+          <Link to={`/cities/compare/${props.city}`}>
+            <button className="btn btn-outline-success compareCities">
+              Campare Cities
+            </button>
+          </Link>
+        </div>
       </div>
     </div>
   );
