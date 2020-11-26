@@ -1,7 +1,12 @@
 .component {
   display: flex;
   flex-direction: column;
-  margin: 17.5rem 0rem 0rem 8rem;
+  align-items: flex-start;
+  padding: 3% 0 3% 3%;
+  width: 25%;
+  margin: 18% 2% 0rem 3%;
+  border-radius: 25px;
+  box-shadow: green 0 0 15px;
 }
 
 .component h1 {

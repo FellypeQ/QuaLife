@@ -28,7 +28,15 @@ function ListCities() {
     getListCities();
   }, []);
   return (
-    <div style={{ backgroundColor: "#F8F9FA", width: "100%", height: "500vh" }}>
+    <div className="listCitiesConteiner">
+      <p>
+        Welcome to Qualife, here you can find information, statistics,
+        curiosities from more than 250 countries around the world!
+      </p>
+      <p>
+        We appreciate the visit and take the time to know more about several
+        places you want while you are here.
+      </p>
       <SearchBar filteredCities={filteredCities} />
       <div className="listCitiesHome">
         {stateBkp.map((elem, i) => {

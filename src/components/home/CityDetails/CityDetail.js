@@ -1114,12 +1114,12 @@ function CityDetail(props) {
   useEffect(() => {
     async function getCityDetails() {
       try {
-        const { id } = props.match.params;
+        //   const { id } = props.match.params;
         const response = await axios.get(
-          `https://api.teleport.org/api/urban_areas/slug:${id}/details/`
+          `https://api.teleport.org/api/urban_areas/slug:${props.match.params.id}/details/`
         );
         const responseImage = await axios.get(
-          `https://api.teleport.org/api/urban_areas/slug:${id}/images/`
+          `https://api.teleport.org/api/urban_areas/slug:${props.match.params.id}/images/`
         );
 
         // console.log("response :", response);
@@ -1146,7 +1146,7 @@ function CityDetail(props) {
           })}
         </select>
         <button
-          className="btn btn-outline-primary"
+          className="btn btn-outline-success"
           onClick={() => {
             // console.log("getWordforCompare", getWordforCompare);
             getCompare(getWordforCompare);
@@ -1155,7 +1155,7 @@ function CityDetail(props) {
           ADD CITY TO COMPARE
         </button>
         <button
-          className="btn btn-outline-secondary"
+          className="btn btn-outline-dark"
           onClick={() => window.location.reload(false)}
         >
           RESET COMPARISON
