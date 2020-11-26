@@ -1,0 +1,35 @@
+.cityInformation {
+  margin-top: 3%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 25px;
+  box-shadow: green 0px 0px 15px;
+  background-color: white;
+  padding: 3% 10%;
+  font-size: 120%;
+}
+
+.cityInformation h6 {
+  text-align: center;
+  font-size: 120%;
+  margin-bottom: 5%;
+}
+
+.item {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.item p {
+  width: 30%;
+  text-align: center;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.ligation {
+  background-color: green;
+  height: 1px;
+  width: 15%;
+  margin-top: 2.5%;
+}

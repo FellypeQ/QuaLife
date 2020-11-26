@@ -3,8 +3,10 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 import "./ResumeScore.css";
+import CityInformation from "./CityInformation";
 import Summary from "./Summary";
 import CityScore from "./CityScore";
+import Salaries from "./Salaries";
 
 function ResumeScore(props) {
   const [state, setState] = useState({ summary: "", categories: [] });
@@ -27,8 +29,10 @@ function ResumeScore(props) {
       <div className="row">
         <div className="col"></div>
         <div className="col-7">
+          <CityInformation city={props.city} />
           <Summary resume={state.summary} city={props.city} />
           <CityScore scores={state.categories} id={props.city} />
+          <Salaries id={props.city} />
         </div>
         <div className="col">
           <Link to={`/cities/compare/${props.city}`}>
