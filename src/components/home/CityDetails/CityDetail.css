@@ -1,5 +1,7 @@
 body {
   background-image: url("../fundo.jpg");
+  background-repeat: repeat-y;
+  background-size: contain;
 }
 
 .flex {
@@ -10,10 +12,12 @@ body {
   display: flex;
   flex-direction: column;
   width: 240px;
-  margin: 4rem 2rem 4rem 3.6rem;
+  margin: 4rem 0 0 6%;
   position: absolute;
 }
 
 button {
   margin-top: 0.8rem;
+  border-radius: 25px;
+  box-shadow: green 0 0 1px;
 }
