@@ -1,0 +1,30 @@
+.component {
+  display: flex;
+  flex-direction: column;
+  margin: 17.5rem 0rem 0rem 8rem;
+}
+
+.component h1 {
+  margin-bottom: 2rem;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.component h4 {
+  font-weight: bold;
+  font-size: medium;
+  margin-bottom: 0rem;
+  margin-top: 2rem;
+}
+
+.component p {
+  margin-top: 0;
+}
+
+.summary {
+  display: flex;
+}
+
+.component div {
+  margin-bottom: 1.7rem;
+}
