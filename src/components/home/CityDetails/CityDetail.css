@@ -1,0 +1,19 @@
+body {
+  background-image: url("../fundo.jpg");
+}
+
+.flex {
+  display: flex;
+}
+
+.compare {
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  margin: 4rem 2rem 4rem 3.6rem;
+  position: absolute;
+}
+
+button {
+  margin-top: 0.8rem;
+}

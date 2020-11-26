@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
+import "./Navbar.css";
+
 function Navbar(props) {
   const [state, setState] = useState([]);
   const [stateBkp, setStateBkp] = useState([]);
@@ -26,7 +28,7 @@ function Navbar(props) {
 
   return (
     <nav
-      className="navbar fixed-top navbar-expand-lg navbar-light bg-light"
+      className="navbar navbar-expand-lg navbar-light bg-light navbarCustom"
       style={{ borderBottom: "solid 1px #28A745" }}
     >
       {" "}
