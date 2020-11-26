@@ -1,0 +1,35 @@
+.grafic {
+  border-radius: 25px;
+  box-shadow: green 0px 0px 15px;
+  background-color: white;
+  margin-top: 4%;
+  padding: 3%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.graficSelection {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 2% 0;
+}
+.graficSelection select {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  align-items: center;
+  border-radius: 30px;
+  padding: 1%;
+  margin-bottom: 2%;
+}
+
+.graficSelection option {
+  text-align: center;
+  background-color: black;
+  color: white;
+  align-items: center;
+}

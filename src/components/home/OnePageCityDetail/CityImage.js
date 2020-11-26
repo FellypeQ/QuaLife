@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
+import "./CityImage.css";
+
 function CityImage(props) {
   const [state, setState] = useState({
     image: "",
@@ -28,22 +30,13 @@ function CityImage(props) {
 
   return (
     <div
-      className="w-100"
+      className="w-100 cityImage"
       style={{
         backgroundImage: `url(${state.image})`,
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-        height: "350px",
-        width: "100%",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        marginTop: "4%",
       }}
     >
-      <h1 style={{ backgroundColor: "white", opacity: "0.5", padding: "1%" }}>
-        {state.cityName}
-      </h1>
+      <h1 className="cityName">{state.cityName}</h1>
+      <p className="cityPhotographer">Photographer: {state.photographer}</p>
     </div>
   );
 }

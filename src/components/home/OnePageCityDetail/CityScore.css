@@ -1,6 +1,8 @@
 .score {
+  border-radius: 25px;
+  box-shadow: green 0px 0px 15px;
   background-color: white;
-  margin: 2% 0;
+  margin-top: 4%;
   padding: 4%;
 }
 
