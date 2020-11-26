@@ -7,10 +7,10 @@ import ResumeScore from "./ResumeScore";
 
 function OnePageCityDetail(props) {
   return (
-    <BrowserRouter>
+    <div>
       <CityImage city={props.match.params.id} />
       <ResumeScore className="summaryCity" city={props.match.params.id} />
-    </BrowserRouter>
+    </div>
   );
 }
 
