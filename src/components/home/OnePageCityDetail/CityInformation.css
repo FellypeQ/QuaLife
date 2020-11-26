@@ -15,6 +15,15 @@
   margin-bottom: 5%;
 }
 
+.imageInformation {
+  box-shadow: green 0px 0px 5px;
+  border-radius: 25px;
+  margin-bottom: 3%;
+}
+.imageInformation img {
+  width: 100%;
+}
+
 .item {
   display: flex;
   justify-content: space-evenly;

@@ -19,7 +19,7 @@ function Salaries(props) {
   useEffect(() => {
     async function listJobs() {
       const response = await axios.get(
-        `https://api.teleport.org/api/urban_areas/slug:${props.id}/salaries/`
+        `https://api.teleport.org/api/urban_areas/slug:${props.city}/salaries/`
       );
       setJobList(response.data.salaries.map((e) => e.job.title));
     }
@@ -29,12 +29,12 @@ function Salaries(props) {
   useEffect(() => {
     async function catchCountry() {
       const response = await axios.get(
-        `https://api.teleport.org/api/urban_areas/slug:${props.id}/`
+        `https://api.teleport.org/api/urban_areas/slug:${props.city}/`
       );
       setsiteCountry(response.data._links["ua:countries"][0].href);
     }
     catchCountry();
-  }, [props.id]);
+  }, [props.city]);
 
   useEffect(() => {
     async function countryData() {
@@ -56,7 +56,7 @@ function Salaries(props) {
   useEffect(() => {
     async function cityData() {
       const response = await axios.get(
-        `https://api.teleport.org/api/urban_areas/slug:${props.id}/salaries/`
+        `https://api.teleport.org/api/urban_areas/slug:${props.city}/salaries/`
       );
       setCityList([
         response.data.salaries.find((e) => e.job.title === profission.actual)
@@ -117,18 +117,17 @@ function Salaries(props) {
   }
 
   return (
-    <div className="grafic">
-      <h3>Average Salary</h3>
+    <div id={props.id} className="grafic">
+      <h3>AVERAGE SALARY</h3>
       <div className="graficSelection">
         <select
           onChange={randleSelection}
           value={profission.select}
           name="select"
-          placeholder
           className="btn-outline-success"
         >
-          {jobsList.map((e) => (
-            <option value={e} name={e}>
+          {jobsList.map((e, idx) => (
+            <option key={idx} value={e} name={e}>
               {e}
             </option>
           ))}
@@ -137,7 +136,6 @@ function Salaries(props) {
           onChange={randleTypeAverage}
           value={typeSalary}
           name="typeSalary"
-          placeholder
           className="btn-outline-success"
         >
           <option value="1" name="Annual">

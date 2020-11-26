@@ -1,4 +1,8 @@
 .search-bar {
   margin: 1rem;
-  margin-top: 5.5%;
+  margin: 7% 0 3% 0;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 11%;
+  box-shadow: green 0 0 16px;
 }
