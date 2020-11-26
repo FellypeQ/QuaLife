@@ -68,12 +68,12 @@ function ResumeScore(props) {
           <LGBTRights idHtml="lgbtRights" id={props.city} />
         </div>
         <div className="col">
-          <button
-            href={`/cities/compare/${props.city}/`}
+          <Link
+            to={`/cities/compare/${props.city}`}
             className="btn btn-outline-success compareCities"
           >
-            <a href={`/cities/compare/${props.city}/`}>Compare Cities</a>
-          </button>
+            Campare Cities
+          </Link>
         </div>
       </div>
     </div>

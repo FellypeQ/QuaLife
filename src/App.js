@@ -13,9 +13,11 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar />
-      <Route exact path="/cities/:id" component={OnePageCityDetail} />
-      <Route exact path="/cities/compare/:id" component={CityDetail} />
-      <Route exact path="/" className="App" component={Home} />
+      <Switch>
+        <Route path="/cities/compare/:id" component={CityDetail} />
+        <Route exact path="/cities/:id" component={OnePageCityDetail} />
+        <Route exact path="/" className="App" component={Home} />
+      </Switch>
       <Footer />
     </BrowserRouter>
   );

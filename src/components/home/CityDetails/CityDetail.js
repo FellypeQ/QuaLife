@@ -1129,6 +1129,7 @@ function CityDetail(props) {
         console.log(error);
       }
     }
+    console.log(props);
     getCityDetails();
   }, []);
 
