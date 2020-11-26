@@ -28,6 +28,7 @@ function CityInformation(props) {
         slug: response.data.slug,
         bounding_box: response.data.bounding_box,
         cityPopulationLink: response.data._links["ua:identifying-city"].href,
+        mape: "",
       });
     }
     CityData();
@@ -36,7 +37,15 @@ function CityInformation(props) {
   useEffect(() => {
     async function CityPopulation() {
       const response = await axios.get(`${state.cityPopulationLink}`);
-      setState({ ...state, population: Number(response.data.population) });
+      setState({
+        ...state,
+        population: Number(response.data.population),
+        mape: `https://dal3fatminugb.cloudfront.net/url-https%3A%2F%2Fd13k13wj6adfdf.cloudfront.net%2Fdots%2Frdot.png(${response.data.location.latlon.longitude.toFixed(
+          1
+        )},${response.data.location.latlon.latitude.toFixed(
+          1
+        )})/11,45,1/510x340.png?access_token=pk.eyJ1IjoidGVsZXBvcnQiLCJhIjoiY2lnM3VqNXVqMDJsaHYza2gwN2wzdXhidCJ9.PuTxgLkbswKZzPhzlKgv4A`,
+      });
     }
     CityPopulation();
   }, [state.cityPopulationLink]);
@@ -54,35 +63,40 @@ function CityInformation(props) {
   }
 
   return (
-    <div className="cityInformation">
-      <h6>
-        Some information about the city {state.name}. How, in which country is
-        it located, population, mayor and etc.
-      </h6>
-      <div className="item">
-        <p>Continent</p>
-        <div className="ligation" />
-        <p>{state.continent}</p>
+    <div id={props.id} className="cityInformation">
+      <div className="imageInformation">
+        <img src={state.mape} alt="City in the World Map" />
       </div>
-      <div className="item">
-        <p>Country</p>
-        <div className="ligation" />
-        <p>{state.country}</p>
-      </div>
-      <div className="item">
-        <p>City</p>
-        <div className="ligation" />
-        <p>{state.name}</p>
-      </div>
-      <div className="item">
-        <p>Mayor</p>
-        <div className="ligation" />
-        <p>{state.mayor}</p>
-      </div>
-      <div className="item">
-        <p>Population</p>
-        <div className="ligation" />
-        <p>{configureNumber(state.population)}</p>
+      <div className="textInformation">
+        <h6>
+          Some information about the city {state.name}. How, in which country is
+          it located, population, mayor and etc.
+        </h6>
+        <div className="item">
+          <p>Continent</p>
+          <div className="ligation" />
+          <p>{state.continent}</p>
+        </div>
+        <div className="item">
+          <p>Country</p>
+          <div className="ligation" />
+          <p>{state.country}</p>
+        </div>
+        <div className="item">
+          <p>City</p>
+          <div className="ligation" />
+          <p>{state.name}</p>
+        </div>
+        <div className="item">
+          <p>Mayor</p>
+          <div className="ligation" />
+          <p>{state.mayor}</p>
+        </div>
+        <div className="item">
+          <p>Population</p>
+          <div className="ligation" />
+          <p>{configureNumber(state.population)}</p>
+        </div>
       </div>
     </div>
   );

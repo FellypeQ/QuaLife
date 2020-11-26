@@ -1,10 +1,12 @@
-.list-cities {
-  list-style: none;
+.listCitiesHome {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
-.list-cities li {
-  display: inline;
-  float: left;
-  width: 20%;
-  margin-top: 0.4rem;
+.buttonCustom {
+  width: 16%;
+  margin: 1% 0.5%;
+  box-shadow: green 0 0 3px;
 }

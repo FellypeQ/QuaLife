@@ -1,9 +1,9 @@
-import "./App.css";
-import Home from "./components/home/Home";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
 
+import Home from "./components/home/Home";
 import Navbar from "./components/home/Navbar/Navbar";
 import OnePageCityDetail from "./components/home/OnePageCityDetail/OnePageCityDetail";
 

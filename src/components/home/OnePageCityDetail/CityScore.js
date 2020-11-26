@@ -24,7 +24,7 @@ function CityScore(props) {
   }
 
   return (
-    <div className="score">
+    <div id={props.id} className="score">
       <h4>LIFE QUALITY SCORE</h4>
       <div className="scoreData">
         {state.map((elem, idx) => {
@@ -65,7 +65,7 @@ function CityScore(props) {
       </div>
       {currentlyItem.status ? (
         <CategoryDetail
-          id={props.id}
+          id={props.city}
           apper={currentlyItem.status}
           currentlyName={currentlyItem.name}
           closeModel={handleClose}

@@ -10,7 +10,7 @@ function Summary(props) {
   }
 
   return (
-    <div className="summaryBlock">
+    <div id={props.id} className="summaryBlock">
       <h2>QUALITY LIFE IN {props.city.replace(/-/, " ").toUpperCase()}</h2>
       <div
         dangerouslySetInnerHTML={createMarkup()}

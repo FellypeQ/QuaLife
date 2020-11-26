@@ -6,6 +6,12 @@
   padding: 4%;
 }
 
+.score h4 {
+  display: flex;
+  justify-content: center;
+  font-size: 180%;
+}
+
 .scoreData {
   margin: 5% 0;
 }

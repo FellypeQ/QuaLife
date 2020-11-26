@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+
 import "./ListCities.css";
 import SearchBar from "../SearchBar/SearchBar";
 
@@ -27,22 +28,21 @@ function ListCities() {
     getListCities();
   }, []);
   return (
-    <div>
+    <div style={{ backgroundColor: "#F8F9FA", width: "100%", height: "500vh" }}>
       <SearchBar filteredCities={filteredCities} />
-      <ul className="list-cities">
+      <div className="listCitiesHome">
         {stateBkp.map((elem, i) => {
           return (
-            <li key={i}>
-              <Link
-                className="city-list-li"
-                to={`cities/${elem.href.slice(46, -1)}`}
-              >
-                {elem.name}
-              </Link>
-            </li>
+            <Link
+              key={i}
+              className="btn btn-outline-success buttonCustom"
+              to={`cities/${elem.href.slice(46, -1)}`}
+            >
+              {elem.name}
+            </Link>
           );
         })}
-      </ul>
+      </div>
     </div>
   );
 }
