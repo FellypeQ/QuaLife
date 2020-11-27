@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+
 import "./ListCities.css";
 import SearchBar from "../SearchBar/SearchBar";
 
@@ -27,22 +28,29 @@ function ListCities() {
     getListCities();
   }, []);
   return (
-    <div>
+    <div className="listCitiesConteiner">
+      <p>
+        Welcome to Qualife, here you can find information, statistics,
+        curiosities from more than 250 countries around the world!
+      </p>
+      <p>
+        We appreciate the visit and take the time to know more about several
+        places you want while you are here.
+      </p>
       <SearchBar filteredCities={filteredCities} />
-      <ul className="list-cities">
+      <div className="listCitiesHome">
         {stateBkp.map((elem, i) => {
           return (
-            <li key={i}>
-              <Link
-                className="city-list-li"
-                to={`cities/${elem.href.slice(46, -1)}`}
-              >
-                {elem.name}
-              </Link>
-            </li>
+            <Link
+              key={i}
+              className="btn btn-outline-success buttonCustom"
+              to={`cities/${elem.href.slice(46, -1)}`}
+            >
+              {elem.name}
+            </Link>
           );
         })}
-      </ul>
+      </div>
     </div>
   );
 }

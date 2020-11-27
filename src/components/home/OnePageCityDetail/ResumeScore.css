@@ -1,0 +1,27 @@
+.compareCities {
+  margin-top: 15%;
+  padding: 5%;
+  box-shadow: green 0px 0px 5px;
+  border-radius: 50px;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 13%;
+}
+
+.linksPage {
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+}
+.linksPage > div {
+  display: flex;
+  flex-direction: column;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 13%;
+}
+.linksPage a {
+  margin: 3.5% 0;
+  box-shadow: green 0px 0px 5px;
+  border-radius: 50px;
+}

@@ -1,0 +1,101 @@
+.housing {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 14rem;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+  margin-top: 8rem;
+  border-radius: 25px;
+  box-shadow: green 0 0 15px;
+}
+
+.housing h3 {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.safety {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 14rem;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+  margin-top: 5rem;
+  border-radius: 25px;
+  box-shadow: green 0 0 15px;
+}
+
+.safety h3 {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.education {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 14rem;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+  margin-top: 4.7rem;
+  border-radius: 25px;
+  box-shadow: green 0 0 15px;
+}
+
+.education h3 {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.healthcare {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 14rem;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+  margin-top: 4.7rem;
+  border-radius: 25px;
+  box-shadow: green 0 0 15px;
+}
+
+.healthcare h3 {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+body {
+  background-image: url("../fundo.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.image {
+  /* background-color: blue; */
+  width: 250px;
+  height: 180px;
+  margin-left: 1.2rem;
+  margin-top: 0.8rem;
+}
+
+.image img {
+  width: 250px;
+  border-radius: 5px;
+}

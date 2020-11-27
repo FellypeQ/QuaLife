@@ -1,0 +1,35 @@
+.component {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 3% 0 3% 3%;
+  width: 25%;
+  margin: 18% 2% 0rem 3%;
+  border-radius: 25px;
+  box-shadow: green 0 0 15px;
+}
+
+.component h1 {
+  margin-bottom: 2rem;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.component h4 {
+  font-weight: bold;
+  font-size: medium;
+  margin-bottom: 0rem;
+  margin-top: 2rem;
+}
+
+.component p {
+  margin-top: 0;
+}
+
+.summary {
+  display: flex;
+}
+
+.component div {
+  margin-bottom: 1.7rem;
+}
