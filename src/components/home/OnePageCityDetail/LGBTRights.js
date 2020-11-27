@@ -15,14 +15,11 @@ function LGBTRights(props) {
       props.id.split("-").forEach((ele) => {
         tempCityName += `${ele.slice(0, 1).toUpperCase() + ele.slice(1)} `;
       });
-      setState(
-        {
-          list: response.data.categories.find((e) => e.label === "Tolerance")
-            .data,
-          cityName: tempCityName,
-        },
-        console.log(state.list)
-      );
+      setState({
+        list: response.data.categories.find((e) => e.label === "Tolerance")
+          .data,
+        cityName: tempCityName,
+      });
     }
     LgbtRights();
   }, [props]);

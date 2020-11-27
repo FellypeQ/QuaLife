@@ -14,12 +14,13 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  flex-wrap: wrap;
 }
 .lgbtCardImage {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40%;
+  width: 325px;
 }
 .lgbtCardImage div {
   display: flex;
@@ -32,10 +33,11 @@
   width: 100%;
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 .rightBlod {
   padding: 1%;
-  width: 30%;
+  width: 245px;
   display: flex;
   justify-content: center;
 }
