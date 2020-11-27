@@ -14,7 +14,7 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <Switch>
-        <Route exact path="/cities/compare/:id" component={CityDetail} />
+        <Route path="/cities/compare/:id" component={CityDetail} />
         <Route exact path="/cities/:id" component={OnePageCityDetail} />
         <Route exact path="/" className="App" component={Home} />
       </Switch>
