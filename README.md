@@ -1,6 +1,6 @@
 #QuaLife
 
-![My Image](https://imgur.com/P5VMtUc)
+![My Image](https://i.imgur.com/P5VMtUc.jpg)
 
 This is a fully functional web application to find information about cities, such as average internet connection, economy data, altitude, mountains, air quality, average wages, rentals and many other related information!
 
